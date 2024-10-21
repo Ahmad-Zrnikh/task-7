@@ -1,0 +1,738 @@
+{
+	"info": {
+		"_postman_id": "986bc50f-fb54-4174-a31c-9693e076ac17",
+		"name": "Task7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37422984"
+	},
+	"item": [
+		{
+			"name": "courses",
+			"item": [
+				{
+					"name": "read all courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MGExMTBiYmMyZWQ0ZWYzNmJlOWVlMCIsImlhdCI6MTcyODcxNDIwMCwiZXhwIjoxNzI5MzE5MDAwfQ.k6kujwSjzGuvcR6p1lObJXI4LoIAURtIPwedvPt_k6Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read custom course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MGExMTBiYmMyZWQ0ZWYzNmJlOWVlMCIsImlhdCI6MTcyODcxODg1NywiZXhwIjoxNzI5MzIzNjU3fQ.Md84WwIjd_5MNBZkph9UKA9fyfCaGv8CY7XH_3EMRz4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/courses/6711f57029dc3cbc4eebcb12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses",
+								"6711f57029dc3cbc4eebcb12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store new course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmMTU3MjlkYzNjYmM0ZWViY2FmNCIsImlhdCI6MTcyOTIyOTE3NywiZXhwIjoxNzI5ODMzOTc3fQ.SC0xO3HsCkQelZ3zL8QTIGNdInt2JkJxpskgolLgFPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"programming\" ,\r\n    \"description\" : \"algorithm\" ,\r\n    \"time\" : \"15 hours\" \r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmMTU3MjlkYzNjYmM0ZWViY2FmNCIsImlhdCI6MTcyOTIyOTE3NywiZXhwIjoxNzI5ODMzOTc3fQ.SC0xO3HsCkQelZ3zL8QTIGNdInt2JkJxpskgolLgFPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"title\" : \"programming\" ,\r\n    \"description\" : \"oop\" ,\r\n    \"time\" : \"30 hours\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/courses/6711f65029dc3cbc4eebcb2b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses",
+								"6711f65029dc3cbc4eebcb2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmMTU3MjlkYzNjYmM0ZWViY2FmNCIsImlhdCI6MTcyOTIyOTE3NywiZXhwIjoxNzI5ODMzOTc3fQ.SC0xO3HsCkQelZ3zL8QTIGNdInt2JkJxpskgolLgFPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/courses/6711f65029dc3cbc4eebcb2b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses",
+								"6711f65029dc3cbc4eebcb2b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teachers",
+			"item": [
+				{
+					"name": "get all teachers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDhkMTg1MjYyODkxMzMxNjRmOWQ2YSIsImlhdCI6MTcyODYzMTE3MywiZXhwIjoxNzI5MjM1OTczfQ.F-QFRHtF19O3bUqDXZsu9m9iSPPkBROlwh2RhlmrHSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/teachers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update teacher",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmMThmMjlkYzNjYmM0ZWViY2FmOCIsImlhdCI6MTcyOTIyOTIwMCwiZXhwIjoxNzI5ODM0MDAwfQ.v1puYBsWusEMZa2u0uBITNuprmP8VH0F3ulH5upjgjU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"badr\" ,\r\n\"email\" : \"badr@gmail.com\",\r\n\"age\" : 22 \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/teachers/6711f18f29dc3cbc4eebcaf8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teachers",
+								"6711f18f29dc3cbc4eebcaf8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete teacher",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmMThmMjlkYzNjYmM0ZWViY2FmOCIsImlhdCI6MTcyOTIyOTIwMCwiZXhwIjoxNzI5ODM0MDAwfQ.v1puYBsWusEMZa2u0uBITNuprmP8VH0F3ulH5upjgjU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/teachers/6711f18f29dc3cbc4eebcaf8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teachers",
+								"6711f18f29dc3cbc4eebcaf8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"ali\",\r\n    \"email\" : \"ali@gmail.com\",\r\n    \"age\" : 22 ,\r\n    \"password\" : \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/teachers/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teachers",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"email\" : \"ahmad@gmail.com\",\r\n    \"password\" : \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/teachers/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teachers",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get custom teacher",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MGNkMGJjMmVhZTVjZTY0NTExNDZjZSIsImlhdCI6MTcyODg5MzM3NSwiZXhwIjoxNzI5NDk4MTc1fQ.dRxh7sf4DKSpHL3uPh5xR4D6dhQr3udG7mKaluVdGVw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/teachers/6711f18f29dc3cbc4eebcaf8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"teachers",
+								"6711f18f29dc3cbc4eebcaf8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "videos",
+			"item": [
+				{
+					"name": "get all videos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MGExMThmYmMyZWQ0ZWYzNmJlOWVlMyIsImlhdCI6MTcyODcxNDk3NiwiZXhwIjoxNzI5MzE5Nzc2fQ.hM4EsRxIB-MGiNHTkkjfQbAOmaTI-kPd8jbY7jzbMhI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new video",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmMTU3MjlkYzNjYmM0ZWViY2FmNCIsImlhdCI6MTcyOTIyOTE3NywiZXhwIjoxNzI5ODMzOTc3fQ.SC0xO3HsCkQelZ3zL8QTIGNdInt2JkJxpskgolLgFPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"binary search\",\r\n    \"description\" : \"trees \",\r\n    \"course_id\" : \"6711fba1b3f04d7876f96725\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update custom video",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmMTU3MjlkYzNjYmM0ZWViY2FmNCIsImlhdCI6MTcyOTIyOTE3NywiZXhwIjoxNzI5ODMzOTc3fQ.SC0xO3HsCkQelZ3zL8QTIGNdInt2JkJxpskgolLgFPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"binary search updated\",\r\n    \"description\" : \"trees\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/videos/6711f6c829dc3cbc4eebcb35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"videos",
+								"6711f6c829dc3cbc4eebcb35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete video",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmMTU3MjlkYzNjYmM0ZWViY2FmNCIsImlhdCI6MTcyOTIyOTE3NywiZXhwIjoxNzI5ODMzOTc3fQ.SC0xO3HsCkQelZ3zL8QTIGNdInt2JkJxpskgolLgFPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/videos/6711f7fc29dc3cbc4eebcb63",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"videos",
+								"6711f7fc29dc3cbc4eebcb63"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get custom video",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/videos/6711f6c829dc3cbc4eebcb35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"videos",
+								"6711f6c829dc3cbc4eebcb35"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "get all comments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MGExMThmYmMyZWQ0ZWYzNmJlOWVlMyIsImlhdCI6MTcyODgwNDgwNiwiZXhwIjoxNzI5NDA5NjA2fQ.F0QFM3-V1aUaK_-u0SxOJRoBTHqADi_TcJE37UklIio",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmNTJhMjlkYzNjYmM0ZWViY2IwZCIsImlhdCI6MTcyOTIzMDEyMywiZXhwIjoxNzI5ODM0OTIzfQ.PYtbDZ84EUgM5_pB0fMs6KjLjg8dyPO9JFFVaeBGQCM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"content\" : \"nice video\",\r\n   \"video_id\" : \"6711fbbab3f04d7876f9672b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update custom comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmNTJhMjlkYzNjYmM0ZWViY2IwZCIsImlhdCI6MTcyOTIzMDEyMywiZXhwIjoxNzI5ODM0OTIzfQ.PYtbDZ84EUgM5_pB0fMs6KjLjg8dyPO9JFFVaeBGQCM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\" : \"new comment updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comments/6711f83d29dc3cbc4eebcb6b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"6711f83d29dc3cbc4eebcb6b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete custom comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTFmNTJhMjlkYzNjYmM0ZWViY2IwZCIsImlhdCI6MTcyOTIzMDEyMywiZXhwIjoxNzI5ODM0OTIzfQ.PYtbDZ84EUgM5_pB0fMs6KjLjg8dyPO9JFFVaeBGQCM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/6711fa73b3f04d7876f966dd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"6711fa73b3f04d7876f966dd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get custom comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/670b79061cc92a8441d6d61a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"670b79061cc92a8441d6d61a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
